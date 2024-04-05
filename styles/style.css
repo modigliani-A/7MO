@@ -1,0 +1,103 @@
+*{ 
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #CFB9C3;
+}
+
+#accederBtn {
+    padding: .5rem 1.5rem .5rem 1.5rem;
+    color: white;
+    background-color: #bf8ecc;
+    border: none;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.25);
+    transition: 1s;
+    letter-spacing: .2rem;
+}
+
+#accederBtn:hover {
+    background-color: #9142a7;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    letter-spacing: .4rem;
+}
+
+#prevBtn {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-left: 1rem;
+}
+
+#nextBtn {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-right: 1rem;
+}
+
+.card {
+    width: 40rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #caafbb;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.589);
+    overflow-y: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.card::-webkit-scrollbar {
+    display: none;
+}
+
+#modalMsg {
+    color: #000e8e;
+    font-weight: bolder;
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin-top: 1.5rem;
+}
+
+@keyframes fade {
+    0%,100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@-webkit-keyframes fade {
+    0%,100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+@media only screen and (max-width: 1000px) {
+    .card {
+        width: 100%;
+        background-color: #caafbb;
+    }
+    .modal-content {
+        width: 80%;
+        margin-left: 10%;
+    }
+    
+    #prevBtn {
+        position: fixed;
+        margin-left: 2.5%;
+    }
+    
+    #nextBtn {
+        position: fixed;
+        margin-right: 2.5%;
+    }
+}
